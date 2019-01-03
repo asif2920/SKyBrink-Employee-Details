@@ -1,0 +1,14 @@
+{% extends 'base.html'  %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container">
+<h1>Delete form</h1>
+    {{failure}}
+<form action="{% url 'deletecheck' %}" method="POST">
+{% csrf_token %}
+    <label>Employee id</label> </br>
+ <input type="number" name="eid"/><br/></br>
+<input type="submit" value="Delete Check"/>
+</form>
+    </div>
+{% endblock %}

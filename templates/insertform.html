@@ -1,0 +1,22 @@
+{% extends 'base.html'  %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container">
+<h1>Insert form</h1>
+    {{error}}
+<form action="{% url 'insert' %}" method="POST">
+{% csrf_token %}
+    <label>First Name</label> </br>
+ <input type="text" name="fname"/><br/>
+    <label> Last Name</label><br/>
+    <input type="text" name="lname"/><br/>
+    <label> Designation </label><br/>
+    <input type="text" name="designation"/><br/>
+    <label> Department</label><br/>
+    <input type="text" name="department"/><br/>
+    <label> Employee Id </label><br/>
+    <input type="text" name="emp_id"/><br/></br>
+<input type="submit" value="Insert"/>
+</form>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html'  %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="container">
+<h1>Log in form</h1>
+    {{failure}}
+<form action="{% url 'updatecheck' %}" method="POST">
+{% csrf_token %}
+    <label>Employee id</label> </br>
+ <input type="number" name="eid"/><br/></br>
+<input type="submit" value="Update Check"/>
+</form>
+    </div>
+{% endblock %}
